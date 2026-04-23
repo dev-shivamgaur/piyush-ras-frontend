@@ -1,8 +1,17 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 
 const NotFoundPage = () => {
     return (
+        <>
+        <Helmet>
+    <title>{`Piyush Ras - Page Not Found`}</title>
+  <meta
+    name="description"
+    content={"Best Hindi poetry platform"}
+  />
+      </Helmet>
         <div className='w-full  bg-gray-900  h-screen'>
             <div className="pt-20 object-cover object-center">
 
@@ -17,6 +26,7 @@ const NotFoundPage = () => {
                         </div></div>
             </div>
         </div>
+        </>
     )
 }
 
