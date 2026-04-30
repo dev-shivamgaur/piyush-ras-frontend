@@ -8,6 +8,7 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdAttachEmail } from "react-icons/md";
 import { BsTwitterX } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io5";
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className=" bg-[#120c08] text-[#f2d9a6]">
@@ -17,7 +18,11 @@ const Footer = () => {
                 <div>
                     <div className="flex items-center cursor-pointer">
                         <div className="text-xl font-bold tracking-wide mr-2 ml-0">
+                            <Link
+                            to ="/"
+                            >
                             <img src="/logo.jpeg" alt="logo" className="w-14 h-14 sm:w-18 sm:h-18 rounded-full" />
+                            </Link>
                         </div>
                         <h1 className="text-2xl font-bold mb-3">Piyush Ras</h1>
                     </div>
@@ -33,22 +38,38 @@ const Footer = () => {
                         <h2 className="text-lg font-semibold mb-3">Quick Links</h2>
                     </div>
                     <div className=" mt-3 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-3">
+                        <Link
+                        to ="/"
+                        >
                         <div className="hover:text-white cursor-pointer flex items-center gap-2">
                             <RiHomeSmileLine className="w-5 h-5 sm:w-6 sm:h-6" />
                             <h3>Home</h3>
                         </div>
+                        </Link>
+                        <Link
+                        to="/"
+                        >
                         <div className="hover:text-white cursor-pointer flex items-center gap-2">
                             <LuSparkles className="w-5 h-5 sm:w-6 sm:h-6" />
                             <h3>Latest</h3>
                         </div>
+                        </Link>
+                        <Link
+                        to="/about"
+                        >
                         <div className="hover:text-white cursor-pointer flex items-center gap-2">
                             <BsInfoCircle className="w-5 h-5 sm:w-6 sm:h-6" />
                             <h3>About</h3>
                         </div>
+                        </Link>
+                        <Link
+                        to="/allKavita"
+                        >
                         <div className="hover:text-white cursor-pointer flex items-center gap-2">
                             <MdOutlineCategory className="w-5 h-5 sm:w-6 sm:h-6" />
                             <h3>Category</h3>
                         </div>
+                        </Link>
                     </div>
 
                 </div>
