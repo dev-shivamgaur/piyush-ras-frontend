@@ -37,7 +37,7 @@ const Home = () => {
       </div>
       <div className="px-4 py-6">
         <div className="text-lg text-white font-bold mb-4 flex items-center gap-x-4">
-          <h1>नवीनतम कविताएँ</h1>
+          <h1>Latest</h1>
           <Link
             to="/allKavita"
           >
