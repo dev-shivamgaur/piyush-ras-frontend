@@ -3,6 +3,7 @@ import { fetchLatestPoetry, fetchPoetryByIdForLoggedInUser } from "../services/p
 import { useSelector, useDispatch } from "react-redux";
 import { processingComplete, removeUpload } from "../store/upload.slice";
 import { Link } from "react-router-dom";
+import SEO from "./SEO";
 
 const UploadProgressPage = () => {
   const [loading, setLoading] = useState(false);
@@ -49,6 +50,8 @@ const UploadProgressPage = () => {
   }, [uploadData]);
 
   return (
+    <>
+    <SEO title="अपलोड प्रगति" path="/uploadProgressPage" noindex />
     <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white p-6">
 
       {/* HEADER */}
@@ -152,6 +155,7 @@ const UploadProgressPage = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

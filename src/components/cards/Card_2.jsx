@@ -14,7 +14,7 @@ export default function Card_2({ data}) {
           <img
             className="w-full h-full object-cover "
             src={data?.thumbnail}
-            alt="card"
+            alt={data?.title ? `${data.title} — हिंदी कविता` : "कविता थंबनेल"}
           />
 
           {/* Overlay Gradient */}

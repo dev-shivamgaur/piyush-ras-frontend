@@ -87,6 +87,7 @@ Create a `.env` file in `Frontend/`:
 
 ```env
 VITE_CORS_ORIGIN=          # Backend base URL (API + Socket.IO)
+VITE_SITE_URL=             # Public site URL for SEO (canonical, OG); default: https://piyushras.vercel.app
 VITE_CLIENT_ID=            # Google OAuth client ID
 VITE_ADMIN_EMAIL=          # Admin email for dashboard access
 VITE_REQUIRED_URL=         # Used by comment/reaction services

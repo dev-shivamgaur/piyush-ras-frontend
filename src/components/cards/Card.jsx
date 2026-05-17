@@ -11,7 +11,7 @@ export default function Card({ data }) {
         <div className="relative w-full h-[180px] overflow-hidden">
           <img
             src={data?.thumbnail || "/main2.png"}
-            alt="poetry"
+            alt={data?.title ? `${data.title} — हिंदी कविता` : "कविता थंबनेल"}
             className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
           />
 

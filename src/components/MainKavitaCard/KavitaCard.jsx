@@ -12,7 +12,8 @@ import { socket } from "../../../socket";
 import { fetchCommentReactionStatus, fetchPoetryReactionStatus, toggleRaction } from "../../services/reaction.service";
 import { FaHeart } from "react-icons/fa6";
 import { useSelector } from "react-redux";
-import { Helmet } from "react-helmet-async";
+import SEO, { buildArticleSchema } from "../SEO";
+import { SITE_URL } from "../../config/seo.config";
 
 const KavitaCard = () => {
   const [params] = useSearchParams();
@@ -270,15 +271,38 @@ const KavitaCard = () => {
     
   },[])
 
+  const readPath = kavitaId
+    ? `/read?k=${kavitaId}`
+    : loggedInUserKavitaId
+      ? `/read/loggedInUser?lk=${loggedInUserKavitaId}`
+      : "/read";
+
+  const poemDescription = poetryInfo?.content
+    ? poetryInfo.content.replace(/\s+/g, " ").trim().slice(0, 160)
+    : undefined;
+
+  const articleSchema =
+    poetryInfo?.title
+      ? buildArticleSchema({
+          title: poetryInfo.title,
+          description: poemDescription,
+          image: poetryInfo.thumbnail,
+          url: `${SITE_URL}${readPath}`,
+          datePublished: poetryInfo.createdAt,
+          author: poetryInfo.ownerName,
+        })
+      : undefined;
+
   return (
     <>
-    <Helmet>
-    <title>{`Piyush Ras - ${poetryInfo?.title || "Loading..."}`}</title>
-  <meta
-    name="description"
-    content={poetryInfo?.content?.slice(0, 150) || "Best Hindi poetry platform"}
-  />
-      </Helmet>
+    <SEO
+      title={poetryInfo?.title || "कविता पढ़ें"}
+      description={poemDescription}
+      path={readPath}
+      image={poetryInfo?.thumbnail}
+      type="article"
+      jsonLd={articleSchema}
+    />
     <div className="min-h-screen  flex justify-center ">
       <div
         className="w-full   bg-[#D7B78D] overflow-hidden relative"

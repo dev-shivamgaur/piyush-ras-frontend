@@ -1,16 +1,18 @@
 import React from 'react'
 import { Login } from '../components'
-import { Helmet } from "react-helmet-async";
+import SEO from '../components/SEO'
 
 const LoginPage = () => {
   return (
-    <div className=''>
-      <Helmet>
-        <title>Piyush Ras - Login</title>
-        <meta name="description" content="Best Hindi poetry platform" />
-      </Helmet>
-        <Login/>
-    </div>
+    <>
+      <SEO
+        title="लॉगिन"
+        description="Piyush Ras पर अपने खाते में लॉगिन करें।"
+        path="/login"
+        noindex
+      />
+      <Login />
+    </>
   )
 }
 

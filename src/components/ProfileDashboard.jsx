@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import { deleteBookMark, fetchAllBookMark } from "../services/bookmark.service";
 import { IoBookmarksOutline } from "react-icons/io5";
 import { deleteReaction, fetchAllLikedPoetry } from "../services/reaction.service";
-import { Helmet } from "react-helmet-async";
+import SEO from "./SEO";
 // import { AiFillHeart } from "react-icons/ai";
 
 
@@ -298,13 +298,11 @@ function ProfileSkeleton() {
 
   return (
     <>
-    <Helmet>
-    <title>{`Piyush Ras - ${userInfo?.fullName || "Loading..."}`}</title>
-  <meta
-    name="description"
-    content={"Best Hindi poetry platform"}
-  />
-      </Helmet>
+    <SEO
+      title={userInfo?.fullName ? `${userInfo.fullName} — प्रोफ़ाइल` : "प्रोफ़ाइल"}
+      path="/profiledashboard"
+      noindex
+    />
     <div className="min-h-screen bg-[radial-gradient(circle_at_center,#8b5a2b_0%,#3d2517_50%,#1a0f0a_100%)] text-white p-4 md:p-8">
       {
         loading ? (<ProfileSkeleton/>) : (

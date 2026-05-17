@@ -26,18 +26,18 @@ const Home = () => {
       <div className=" w-full h-[40vh] md:h-[50vh] lg:[60vh] ">
         <img
           src="/main.jpeg"
-          alt="Main"
+          alt="Piyush Ras — हिंदी कविता होम बैनर"
           className="w-full h-full object-cover md:hidden object-center"
         />
         <img
           src="/main2.png"
-          alt="Main"
+          alt="Piyush Ras — हिंदी कविता और शायरी"
           className="w-full hidden md:block  h-full object-cover object-center"
         />
       </div>
       <div className="px-4 py-6">
         <div className="text-lg text-white font-bold mb-4 flex items-center gap-x-4">
-          <h1>Latest</h1>
+          <h1>नवीनतम कविताएँ</h1>
           <Link
             to="/allKavita"
           >

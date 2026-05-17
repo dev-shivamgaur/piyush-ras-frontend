@@ -14,7 +14,7 @@ function Header() {
       
       {/* Logo */}
       <Link to="/">
-        <img src="/logo.jpeg" alt="logo" className="w-12 h-12 rounded-full" />
+        <img src="/logo.jpeg" alt="Piyush Ras लोगो" className="w-12 h-12 rounded-full" />
       </Link>
 
       {/* Navigation */}

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /signup
+Disallow: /uploadProgressPage
+Disallow: /profiledashboard
+Disallow: /read/loggedInUser
+
+Sitemap: https://piyushras.vercel.app/sitemap.xml

@@ -1,18 +1,21 @@
 import React from 'react'
 import { Home } from '../components'
-import { Helmet } from "react-helmet-async";
+import SEO, { buildWebsiteSchema } from '../components/SEO'
+import { DEFAULT_DESCRIPTION } from '../config/seo.config'
+
 function HomePage() {
   return (
     <>
-    <Helmet>
-        <title>Piyush Ras - Home</title>
-        <meta name="description" content="Best Hindi poetry platform" />
-      </Helmet>
+      <SEO
+        title="होम"
+        description={DEFAULT_DESCRIPTION}
+        path="/"
+        jsonLd={buildWebsiteSchema()}
+      />
       <div className=''>
-      <Home/>
-    </div>
-</>
-    
+        <Home/>
+      </div>
+    </>
   )
 }
 

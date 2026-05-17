@@ -1,14 +1,17 @@
 import React from 'react'
 import { Cards } from '../components'
-import { Helmet } from "react-helmet-async";
+import SEO from '../components/SEO'
 
 const CardsPage = () => {
-  <Helmet>
-        <title>Piyush Ras - All Poetries</title>
-        <meta name="description" content="Best Hindi poetry platform" />
-      </Helmet>
   return (
-    <div><Cards/></div>
+    <>
+      <SEO
+        title="सभी कविताएँ"
+        description="कविता, लंबी कविता, शायरी और त्योहार विशेष — Piyush Ras पर सभी हिंदी रचनाएँ एक जगह पढ़ें।"
+        path="/allKavita"
+      />
+      <Cards />
+    </>
   )
 }
 

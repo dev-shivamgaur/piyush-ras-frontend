@@ -4,8 +4,6 @@ import { TfiAngleLeft } from "react-icons/tfi";
 import { BsChevronRight } from "react-icons/bs";
 import { fetchAllPoetry as serviceFetchAllPoetry } from "../services/poetry.service";
 import { SkeletonHomeComponent } from "./Home";
-import { Helmet } from "react-helmet-async";
-
 const PAGE_SIZE = 5;
 
 const Cards = () => {
@@ -71,10 +69,6 @@ const Cards = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{`Piyush Ras - All Poetries`}</title>
-      </Helmet>
-
       <div className="w-full min-h-screen bg-[radial-gradient(circle_at_center,#8b5a2b_0%,#3d2517_50%,#1a0f0a_100%)] font-['Yatra_One']">
 
 <div className="flex flex-col gap-y-11 overflow-hidden py-9">
