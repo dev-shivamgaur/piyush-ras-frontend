@@ -19,15 +19,15 @@ const Footer = () => {
                     <div className="flex items-center cursor-pointer">
                         <div className="text-xl font-bold tracking-wide mr-2 ml-0">
                             <Link
-                            to ="/"
+                                to="/"
                             >
-                            <img src="/logo.jpeg" alt="logo" className="w-14 h-14 sm:w-18 sm:h-18 rounded-full" />
+                                <img src="/logo.jpeg" alt="logo" className="w-14 h-14 sm:w-18 sm:h-18 rounded-full" />
                             </Link>
                         </div>
                         <h1 className="text-2xl font-bold mb-3">Piyush Ras</h1>
                     </div>
                     <p className="text-sm text-[#caa56a] mt-1">
-                    कविता के पियूष रूपी रस से कभी अपने मन की प्यास बुझाना तो कभी उसमें भीग जाना...
+                        कविता के पियूष रूपी रस से कभी अपने मन की प्यास बुझाना तो कभी उसमें भीग जाना...
                     </p>
                 </div>
 
@@ -39,36 +39,36 @@ const Footer = () => {
                     </div>
                     <div className=" mt-3 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-3">
                         <Link
-                        to ="/"
+                            to="/"
                         >
-                        <div className="hover:text-white cursor-pointer flex items-center gap-2">
-                            <RiHomeSmileLine className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <h3>Home</h3>
-                        </div>
+                            <div className="hover:text-white cursor-pointer flex items-center gap-2">
+                                <RiHomeSmileLine className="w-5 h-5 sm:w-6 sm:h-6" />
+                                <h3>Home</h3>
+                            </div>
                         </Link>
                         <Link
-                        to="/"
+                            to="/"
                         >
-                        <div className="hover:text-white cursor-pointer flex items-center gap-2">
-                            <LuSparkles className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <h3>Latest</h3>
-                        </div>
+                            <div className="hover:text-white cursor-pointer flex items-center gap-2">
+                                <LuSparkles className="w-5 h-5 sm:w-6 sm:h-6" />
+                                <h3>Latest</h3>
+                            </div>
                         </Link>
                         <Link
-                        to="/about"
+                            to="/about"
                         >
-                        <div className="hover:text-white cursor-pointer flex items-center gap-2">
-                            <BsInfoCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <h3>About</h3>
-                        </div>
+                            <div className="hover:text-white cursor-pointer flex items-center gap-2">
+                                <BsInfoCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+                                <h3>About</h3>
+                            </div>
                         </Link>
                         <Link
-                        to="/allKavita"
+                            to="/allKavita"
                         >
-                        <div className="hover:text-white cursor-pointer flex items-center gap-2">
-                            <MdOutlineCategory className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <h3>Category</h3>
-                        </div>
+                            <div className="hover:text-white cursor-pointer flex items-center gap-2">
+                                <MdOutlineCategory className="w-5 h-5 sm:w-6 sm:h-6" />
+                                <h3>Category</h3>
+                            </div>
                         </Link>
                     </div>
 
@@ -86,16 +86,30 @@ const Footer = () => {
                             <h3>Email</h3>
                         </div>
                         <div className="hover:text-white cursor-pointer flex items-center gap-2">
-                            <FaInstagram className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <h3>Instagram</h3>
+                            <a
+                                className="flex items-center gap-2 "
+                                href="https://www.instagram.com/piyushras_kavya/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaInstagram className="w-5 h-5 sm:w-6 sm:h-6" />
+                                <h3>Instagram</h3>
+                            </a>
                         </div>
                         <div className="hover:text-white cursor-pointer flex items-center gap-2">
-                            <BsTwitterX className="w-5 h-5 sm:w-6 sm:h-6 "/>
+                            <BsTwitterX className="w-5 h-5 sm:w-6 sm:h-6 " />
                             <h3>Twitter</h3>
                         </div>
                         <div className="hover:text-white cursor-pointer flex items-center gap-2" >
+                        <a
+                                className="flex items-center gap-2 "
+                                href="https://www.youtube.com/@PiyushRasKavya"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                             <IoLogoYoutube className="w-5 h-5 sm:w-6 sm:h-6" />
                             <h3>Youtube</h3>
+                            </a>
                         </div>
                     </div>
                 </div>
