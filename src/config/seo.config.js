@@ -21,5 +21,6 @@ export const LOCALE = "hi_IN";
 export const THEME_COLOR = "#3d2517";
 
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.jpeg`;
+console.log(SITE_URL);
 
 export const TWITTER_CARD = "summary_large_image";

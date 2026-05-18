@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <>
       <SEO
-        title="होम"
+        title="Home"
         description={DEFAULT_DESCRIPTION}
         path="/"
         jsonLd={buildWebsiteSchema()}
