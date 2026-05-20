@@ -354,7 +354,7 @@ const KavitaCard = () => {
 
 
           <div className="text-gray-800 text-lg sm:text-2xl mt-2 leading-9 space-y-2  font-medium">
-            <pre className="whitespace-pre-wrap font-['Ranga'] text-2xl sm:text-xl md:text-2xl leading-relaxed tracking-wide"
+            <pre className="whitespace-pre-wrap font-['Ranga'] text-lg sm:text-xl md:text-2xl leading-relaxed tracking-wide"
               onCopy={(e) => (e.preventDefault(
                 setError("Copy can not allowed")
               ))}
