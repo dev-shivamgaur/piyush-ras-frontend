@@ -156,116 +156,132 @@ function ProfileSkeleton() {
   const location = useLocation();
 
   useEffect(()=>{
-
-    const fetchUserInfo = async() => {
-      setLoading(true);
-      let res = await userProfile();
-
-      if (res.message === "Unauthorized") {
-        const res2 = await createNewAccessToken();
+    if (authData) {
+      const fetchUserInfo = async() => {
+        setLoading(true);
+        
+        let res = await userProfile();
   
-        if (res2.message === "Session expired, please login!") {
-          setError(res2.message);
-
-          sessionStorage.setItem(
-            "prottectedRouteUrl",
-            location.pathname + location.search
-          );
-
-          navigate("/login");
+        if (res.message === "Unauthorized") {
+          const res2 = await createNewAccessToken();
+    
+          if (res2.message === "Session expired, please login!") {
+           
+            setError(res2.message);
+          
+  
+            sessionStorage.setItem(
+              "prottectedRouteUrl",
+              location.pathname + location.search
+            );
+  
+            navigate("/login");
+            return;
+          }
+    
+          if (res2.message === "Access Token is created SuccessFully") {
+          res = await userProfile();
+            
+          }
+    
+        }
+  
+        if (res?.statusCode === 200) {
+          setUserInfo(res?.data);
+          setLoading(false);
           return;
         }
-  
-        if (res2.message === "Access Token is created SuccessFully") {
-        res = await userProfile();
-          
-        }
-  
       }
-
-      if (res?.statusCode === 200) {
-        setUserInfo(res?.data);
-        setLoading(false);
-        return;
-      }
-    }
-
+      
     fetchUserInfo();
+    } else {
+      setLoading(false);
+      navigate("/login");
+    }
+    
+
 
   },[])
 
   useEffect(()=>{
 
-    const fetchBookMarkDetails = async () => {
+    if (authData) {
+      const fetchBookMarkDetails = async () => {
 
-      setBookMarkLoading(true);
-      let res = await fetchAllBookMark();
-      if (res.message === "Unauthorized") {
-        const res2 = await createNewAccessToken();
-  
-        if (res2.message === "Session expired, please login!") {
-          setError(res2.message);
-
-          sessionStorage.setItem(
-            "prottectedRouteUrl",
-            location.pathname + location.search
-          );
-
-          navigate("/login");
-          return;
-        }
-  
-        if (res2.message === "Access Token is created SuccessFully") {
-        res = await fetchAllBookMark();
-          
-        }
-  
-      }
-
-      if (res?.statusCode === 200) {
-        // console.log(res);
-        setBookMarkInfo(res?.data);
-        setBookMarkLoading(false);
-        return;
-      }
-    }
-
-    const fetchReactionDetails = async () => {
-      setReactionLoading(true);
-      let res = await fetchAllLikedPoetry();
-      if (res.message === "Unauthorized") {
-        const res2 = await createNewAccessToken();
-  
-        if (res2.message === "Session expired, please login!") {
-          setError(res2.message);
-
-          sessionStorage.setItem(
-            "prottectedRouteUrl",
-            location.pathname + location.search
-          );
-
-          navigate("/login");
-          return;
-        }
-  
-        if (res2.message === "Access Token is created SuccessFully") {
-        res = await fetchAllLikedPoetry();
-          
-        }
-  
-      }
-
-      if (res?.statusCode === 200) {
-        // console.log(res);
-        setReactionInfo(res?.data);
-        setReactionLoading(false);
-        return;
-      }
-    }
+        setBookMarkLoading(true);
+        let res = await fetchAllBookMark();
+        if (res.message === "Unauthorized") {
+          const res2 = await createNewAccessToken();
     
-    fetchBookMarkDetails();
-
-    fetchReactionDetails();
+          if (res2.message === "Session expired, please login!") {
+            setError(res2.message);
+  
+            sessionStorage.setItem(
+              "prottectedRouteUrl",
+              location.pathname + location.search
+            );
+  
+            navigate("/login");
+            return;
+          }
+    
+          if (res2.message === "Access Token is created SuccessFully") {
+          res = await fetchAllBookMark();
+            
+          }
+    
+        }
+  
+        if (res?.statusCode === 200) {
+          // console.log(res);
+          setBookMarkInfo(res?.data);
+          setBookMarkLoading(false);
+          return;
+        }
+      }
+  
+      const fetchReactionDetails = async () => {
+        setReactionLoading(true);
+        let res = await fetchAllLikedPoetry();
+        if (res.message === "Unauthorized") {
+          const res2 = await createNewAccessToken();
+    
+          if (res2.message === "Session expired, please login!") {
+            setError(res2.message);
+  
+            sessionStorage.setItem(
+              "prottectedRouteUrl",
+              location.pathname + location.search
+            );
+  
+            navigate("/login");
+            return;
+          }
+    
+          if (res2.message === "Access Token is created SuccessFully") {
+          res = await fetchAllLikedPoetry();
+            
+          }
+    
+        }
+  
+        if (res?.statusCode === 200) {
+          // console.log(res);
+          setReactionInfo(res?.data);
+          setReactionLoading(false);
+          return;
+        }
+      }
+      
+      fetchBookMarkDetails();
+  
+      fetchReactionDetails();
+    }
+    else {
+      setLoading(false);
+      navigate("/login");
+    }
+   
 
   },[])
 
@@ -299,7 +315,7 @@ function ProfileSkeleton() {
   return (
     <>
     <SEO
-      title={userInfo?.fullName ? `${userInfo.fullName} — प्रोफ़ाइल` : "प्रोफ़ाइल"}
+      title={userInfo?.fullName ? `${userInfo.fullName} — Profile` : "Profile"}
       path="/profiledashboard"
       noindex
     />

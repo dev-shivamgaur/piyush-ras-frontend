@@ -6,8 +6,8 @@ const DashboardPage = () => {
   return (
     <>
       <SEO
-        title="डैशबोर्ड"
-        description="Piyush Ras एडमिन डैशबोर्ड"
+        title="Dashboard"
+        description="Piyush Ras Admin Dashboard"
         path="/dashboard"
         noindex
       />

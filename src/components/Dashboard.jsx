@@ -13,7 +13,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1);  
   const [hasMore, sethashMore] = useState(true);
   const [poetryInfo, setPoetryInfo] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -114,7 +114,6 @@ export default function Dashboard() {
   }
 
   const handleDelete = async (e, item) => {
-    console.log(item)
     e.preventDefault();
     e.stopPropagation();
     const result = await Swal.fire({

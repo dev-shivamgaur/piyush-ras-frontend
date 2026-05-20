@@ -20,7 +20,6 @@ const Login = () => {
   } = useForm();
 
   const authData = useSelector((state) => state.auth.userData);
-  console.log(authData)
 
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);

@@ -152,6 +152,20 @@ const userProfile = async() => {
         console.log(error);
         return error.response.data;
     }
+};
+
+const checkUserAvailability = async() => {
+    try {
+        
+        const res = await axios.get(`${CORS_ORIGIN}/api/v1/users/check-user-public-route`,
+            {
+                withCredentials: true,
+            }
+        );
+        return res.data;
+    } catch (error) {
+        return error.response.data;
+    }
 }
 
 export {
@@ -163,6 +177,7 @@ export {
     afterSignupGoogleLogin,
     createNewAccessToken,
     userProfile,
+    checkUserAvailability
 };
 
 

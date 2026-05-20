@@ -64,7 +64,6 @@ const KavitaCard = () => {
 
       } else if (loggedInUserKavitaId) {
         res = await fetchPoetryByIdForLoggedInUser(loggedInUserKavitaId);
-        console.log(res);
         if (res.message === "Unauthorized") {
           const res2 = await createNewAccessToken();
 

@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <div>
       <SEO
-        title="हमारे बारे में"
+        title="About"
         description="पियूष गौड़ द्वारा Piyush Ras — भक्ति, देशप्रेम और समाज पर हिंदी कविताएँ। लेखक और मंच के बारे में जानें।"
         path="/about"
         jsonLd={{

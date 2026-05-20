@@ -25,10 +25,10 @@ const Cards = () => {
     const res = await serviceFetchAllPoetry();
 
     if (res.statusCode === 200) {
-      console.log("Fetching Kavita Page:", pageKavita);
-      console.log("Fetching LongPoem Page:", pageLong);
-      console.log("Fetching Shayari Page:", pageShayari);
-      console.log("Fetching Festival Page:", pageFestival);
+      // console.log("Fetching Kavita Page:", pageKavita);
+      // console.log("Fetching LongPoem Page:", pageLong);
+      // console.log("Fetching Shayari Page:", pageShayari);
+      // console.log("Fetching Festival Page:", pageFestival);
 
       const kavitaData = res?.data[0]?.kavita[0]?.data || [];
       const longData = res?.data[0]?.longPoem[0]?.data || [];

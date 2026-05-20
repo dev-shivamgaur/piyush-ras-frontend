@@ -6,7 +6,7 @@ const CardsPage = () => {
   return (
     <>
       <SEO
-        title="सभी कविताएँ"
+        title="All Kavita"
         description="कविता, लंबी कविता, शायरी और त्योहार विशेष — Piyush Ras पर सभी हिंदी रचनाएँ एक जगह पढ़ें।"
         path="/allKavita"
       />

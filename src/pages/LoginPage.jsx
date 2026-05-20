@@ -6,7 +6,7 @@ const LoginPage = () => {
   return (
     <>
       <SEO
-        title="लॉगिन"
+        title="Login"
         description="Piyush Ras पर अपने खाते में लॉगिन करें।"
         path="/login"
         noindex

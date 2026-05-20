@@ -6,7 +6,7 @@ const NotFoundPage = () => {
     return (
         <>
         <SEO
-          title="पेज नहीं मिला"
+          title="Page Not Found"
           description="यह पेज मौजूद नहीं है। Piyush Ras होम पर वापस जाएँ।"
           path="/404"
           noindex

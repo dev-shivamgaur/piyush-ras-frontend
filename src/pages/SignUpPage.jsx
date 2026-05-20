@@ -6,7 +6,7 @@ const SignUpPage = () => {
   return (
     <>
       <SEO
-        title="साइन अप"
+        title="SignUp"
         description="Piyush Ras पर नया खाता बनाएँ और कविताएँ पसंद करें, बुकमार्क करें।"
         path="/signup"
         noindex
