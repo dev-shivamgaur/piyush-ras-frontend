@@ -23,7 +23,7 @@ const Home = () => {
     <div className="h-full w-full bg-[radial-gradient(circle_at_center,#8b5a2b_0%,#3d2517_50%,#1a0f0a_100%)] ">
 
       {/* Image Section */}
-      <div className=" w-full h-[40vh] md:h-[50vh] lg:[60vh] ">
+      <div className=" w-full h-[40vh] md:h-[50vh] lg:[60vh] pb-6 bg-yellow-950">
         <img
           src="/main.jpeg"
           alt="Piyush Ras — हिंदी कविता होम बैनर"
@@ -41,7 +41,7 @@ const Home = () => {
           <Link
             to="/allKavita"
           >
-            <div className=' flex items-center rounded-xl p-2 bg-[#ad6404db] hover:cursor-pointer gap-x-1'>
+            <div className=' flex items-center rounded-xl p-1 px-2 bg-[#ad6404db] hover:cursor-pointer gap-x-1'>
               <h2 className='text-sm'>View All</h2>
               <FaAngleDoubleRight /></div>
           </Link>
