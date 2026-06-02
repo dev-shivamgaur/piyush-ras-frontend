@@ -4,7 +4,7 @@ import { TfiAngleLeft } from "react-icons/tfi";
 import { BsChevronRight } from "react-icons/bs";
 import { fetchAllPoetry as serviceFetchAllPoetry } from "../services/poetry.service";
 import { SkeletonHomeComponent } from "./Home";
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 10;
 
 const Cards = () => {
   const [kavita, setKavita] = useState([]);
@@ -46,6 +46,7 @@ const Cards = () => {
 
   useEffect(() => {
     fetchAllPoetry();
+    console.log(kavita);
   }, []);
 
   // ✅ Scroll pagination trigger
