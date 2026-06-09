@@ -20,28 +20,58 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="h-full w-full bg-[radial-gradient(circle_at_center,#8b5a2b_0%,#3d2517_50%,#1a0f0a_100%)] ">
+    <div className="h-full w-full bg-[#FFF2C6] ">
 
       {/* Image Section */}
-      <div className=" w-full h-[40vh] md:h-[50vh] lg:[60vh] pb-6 bg-yellow-950">
-        <img
-          src="/main.jpeg"
-          alt="Piyush Ras — हिंदी कविता होम बैनर"
-          className="w-full h-full object-cover md:hidden object-center"
-        />
-        <img
-          src="/main2.png"
-          alt="Piyush Ras — हिंदी कविता और शायरी"
-          className="w-full hidden md:block  h-full object-cover object-center"
-        />
-      </div>
+      <div className="w-full h-[90%] bg-[#FDF8EE]">
+  {/* Mobile Layout */}
+  <div className="md:hidden">
+    <img
+      src="/newhomebanner.png"
+      alt="Piyush Ras"
+      className="w-full h-auto object-contain"
+    />
+  </div>
+
+  {/* Desktop Layout */}
+  <div className="hidden md:flex h-[80%] items-center">
+    
+    {/* Left Content */}
+    <div className="w-1/2 px-12 lg:px-20">
+      <h1 className="text-5xl font-bold text-amber-900 mb-6">
+        Piyush Ras
+      </h1>
+
+      <p className="text-lg text-amber-800 leading-8 mb-8">
+        कविता, गीत, शायरी और साहित्य की सुंदर दुनिया में आपका स्वागत है।
+        यहाँ आपको नई कविताएँ, प्रेरणादायक रचनाएँ और हृदय को छू लेने वाले
+        गीत पढ़ने और सुनने को मिलेंगे।
+      </p>
+
+      <button className="px-8 py-3 bg-amber-700 text-white rounded-lg hover:bg-amber-800 transition">
+        Explore Poems
+      </button>
+    </div>
+
+    {/* Right Image */}
+    <div className="w-1/2 flex justify-end">
+      <img
+        src="/newhomebanner.png"
+        alt="Piyush Ras"
+        className="w-full h-full object-cover object-center"
+      />
+    </div>
+
+  </div>
+</div>
+      
       <div className="px-4 py-6">
         <div className="text-lg text-white font-bold mb-4 flex items-center gap-x-4">
-          <h1>Latest</h1>
+          <h1 className='text-black'>Latest</h1>
           <Link
             to="/allKavita"
           >
-            <div className=' flex items-center rounded-xl p-1 px-2 bg-[#ad6404db] hover:cursor-pointer gap-x-1'>
+            <div className=' flex items-center rounded-xl p-1 px-2 bg-amber-700 text-white hover:cursor-pointer gap-x-1'>
               <h2 className='text-sm'>View All</h2>
               <FaAngleDoubleRight /></div>
           </Link>

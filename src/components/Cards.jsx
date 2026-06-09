@@ -70,13 +70,13 @@ const Cards = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen bg-[radial-gradient(circle_at_center,#8b5a2b_0%,#3d2517_50%,#1a0f0a_100%)] font-['Yatra_One']">
+      <div className="w-full min-h-screen bg-[#FFF2C6] font-['Yatra_One']">
 
 <div className="flex flex-col gap-y-11 overflow-hidden py-9">
 
   {/* 🔹 SECTION 1 */}
   <div className="sm:w-[85%] w-[90%] mx-auto flex flex-col gap-y-5">
-    <h2 className="text-xl sm:text-2xl text-white font-semibold ml-2">कविताएँ</h2>
+    <h2 className="text-xl sm:text-2xl text-black font-semibold ml-2">कविताएँ</h2>
 
     <div
       ref={ref1}
@@ -102,7 +102,7 @@ const Cards = () => {
 
   {/* 🔹 SECTION 2 */}
   <div className="w-[85%] mx-auto flex flex-col gap-y-5">
-    <h2 className="text-xl sm:text-2xl text-white font-semibold ml-2">Long कविताएँ</h2>
+    <h2 className="text-xl sm:text-2xl text-black font-semibold ml-2">खंड काव्य</h2>
 
     <div
       ref={ref2}
@@ -128,7 +128,8 @@ const Cards = () => {
 
   {/* 🔹 SECTION 3 */}
   <div className="w-[85%] mx-auto flex flex-col gap-y-5">
-    <h2 className="text-xl sm:text-2xl text-white font-semibold ml-2">Shayari</h2>
+    <h2 className="text-xl sm:text-2xl text-black font-semibold ml-2">
+    छंद (शायरी)</h2>
 
     <div
       ref={ref3}
@@ -154,7 +155,8 @@ const Cards = () => {
 
   {/* 🔹 SECTION 4 */}
   <div className="w-[85%] mx-auto flex flex-col gap-y-5">
-    <h2 className="text-xl sm:text-2xl text-white font-semibold ml-2">Festival Poems</h2>
+    <h2 className="text-xl sm:text-2xl text-black font-semibold ml-2">
+    शुभकामना कविताएं</h2>
 
     <div
       ref={ref4}

@@ -20,7 +20,7 @@ export default function Card({ data }) {
         </div>
 
         {/* Content */}
-        <div className="pt-2 pl-2 sm:p-2 flex flex-col bg-amber-200 justify-between h-[50px] sm:h-[60px]">
+        <div className="pt-2 pl-2 sm:p-2 flex flex-col bg-transparent  justify-between h-[50px] sm:h-[60px]">
           
           {/* Title */}
           <h2 className="text-lg md:text-xl font-bold text-[#7a3e06] font-['Yatra_One'] leading-snug line-clamp-2">
